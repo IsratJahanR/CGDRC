@@ -4,7 +4,7 @@ const FooterSection = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">MomCare Platform</h3>
+            <h3 className="text-lg font-semibold mb-4">Child Growth & Development Research Centre</h3>
             <p className="text-gray-400 text-sm">
               Compassionate care for mothers and children through every stage of development.
             </p>
@@ -33,7 +33,7 @@ const FooterSection = () => {
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>Email: care@momcare.com</li>
+              <li>Email: cgdrc@gmail.com</li>
               <li>Phone: +1 (555) 123-CARE</li>
               <li>Emergency: +1 (555) 911-HELP</li>
               <li>24/7 Support Available</li>
@@ -42,7 +42,7 @@ const FooterSection = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-          <p>&copy; 2024 MomCare Platform. All rights reserved. | Privacy Policy | Terms of Service</p>
+          <p>&copy; 2024 Child Growth & Development Research Centre. All rights reserved. | Privacy Policy | Terms of Service</p>
         </div>
       </div>
     </footer>
