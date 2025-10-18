@@ -31,18 +31,7 @@ const Header = () => {
             <a href="#advisory" className="hover:underline">Advisory Panel</a>
             <a href="#guides" className="hover:underline">Guides</a>
           </nav>
-        {/* Actions */}
-        <div className="flex items-center gap-3">
-          <Button
-            variant="secondary"
-            size="sm"
-            className="bg-white text-healthcare-blue hover:bg-gray-100 rounded-xl px-4 py-2 flex items-center"
-          >
-            <User className="w-4 h-4 mr-2" />
-            Log In
-          </Button>
-          
-        </div>
+        
       </div>
     </header>
   );

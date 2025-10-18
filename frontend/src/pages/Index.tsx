@@ -1,23 +1,25 @@
-import Header from "@/components/Header";
-import MainTitle from "@/components/MainTitle";
-import ServicesSection from "@/components/ServicesSection";
-import ConsultantsSection from "@/components/ConsultantsSection";
-import PackagesSection from "@/components/PackagesSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import FeedbackSection from "@/components/FeedbackSection";
-import FooterSection from "@/components/FooterSection";
+import Navigation from "@/components/Navigation";
+import Hero from "@/components/Hero";
+import VisionMission from "@/components/VisionMission";
+import Approach from "@/components/Approach";
+import AdvisoryPanel from "@/components/AdvisoryPanel";
+import Publications from "@/components/Publications";
+import Services from "@/components/Services";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <MainTitle />
-      <ServicesSection />
-      <ConsultantsSection />
-      <PackagesSection />
-      <TestimonialsSection />
-      <FeedbackSection />
-      <FooterSection />
+    <div className="min-h-screen">
+      <Navigation />
+      <Hero />
+      <VisionMission />
+      <Approach />
+      <AdvisoryPanel />
+      <Publications />
+      <Services />
+      <Contact />
+      <Footer />
     </div>
   );
 };
