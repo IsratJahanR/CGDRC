@@ -16,11 +16,11 @@ const AdvisoryPanel = () => {
   const ceo = {
     name: "MD. ABDULAZIZ",
     title: "Chief Executive Officer & Founder",
-    image: "/images/ceo.jpg", // 👉 Replace with actual image path
+    image: "src/assets/team-members", // Replace with actual CEO image
     contact: {
       phone: "+8801682250051",
       email: "aziz.fst93@gmail.com",
-      linkedin: "https://www.linkedin.com/in/abdulaziz", // optional
+      linkedin: "https://www.linkedin.com/in/abdulaziz",
     },
     message:
       "At Child Growth & Development Research Centre, our mission is to inspire research, innovation, and collaboration to improve child nutrition and overall well-being. Together, we can build a healthier and smarter generation.",
@@ -30,20 +30,22 @@ const AdvisoryPanel = () => {
     {
       name: "Md. Altaf Hossain",
       role: "Associate Professor",
-      expertise: "Department of Applied Food Science and Nutrition",
+      image: "/images/advisor1.jpg", // Dummy image
+      expertise: "Applied Food Science and Nutrition",
       credentials:
         "BSc (Hons) in Food Science and Technology, MSc in Applied Human Nutrition and Dietetics",
       research:
-        "Food safety, maternal perinatal and pediatric nutrition, metabolic disorder, community and public health nutrition, dietary bioactive components, nutritional epidemiology",
+        "Food safety, maternal perinatal and pediatric nutrition, metabolic disorder, and nutritional epidemiology",
       link: "https://www.researchgate.net/profile/Md-Hossain-110",
     },
     {
       name: "Mohammad Mozibul Haque",
       role: "Assistant Professor",
-      expertise: "Department of Applied Food Science and Nutrition",
+      image: "/images/advisor2.jpg", // Dummy image
+      expertise: "Applied Human Nutrition and Dietetics",
       credentials:
-        "B.Sc. (Hon's) in Food Science and Technology, MS in Applied Human Nutrition and Dietetics",
-      research: "Applied Human Nutrition and Dietetics, Food Science and Technology",
+        "B.Sc. (Hons) in Food Science and Technology, MS in Applied Human Nutrition and Dietetics",
+      research: "Applied Human Nutrition, Food Science and Technology",
       link: "https://www.researchgate.net/profile/Mohammad-Hauqe",
     },
   ];
@@ -52,7 +54,7 @@ const AdvisoryPanel = () => {
     {
       name: "Israt Jahan Reshma",
       role: "Junior Researcher",
-      icon: Users,
+      image: "/images/team1.jpg", // Dummy image
       contact: {
         email: "israt.gstu@gmail.com",
         linkedin: "https://www.linkedin.com/in/israt-jahan-788a0619a/",
@@ -61,7 +63,7 @@ const AdvisoryPanel = () => {
     {
       name: "Yeasin Arafat",
       role: "IT Executive",
-      icon: Briefcase,
+      image: "/images/team2.jpg",
       contact: {
         email: "mdarafat1819@gmail.com",
         linkedin: "https://www.linkedin.com/in/md-yeasin-arafat",
@@ -70,7 +72,7 @@ const AdvisoryPanel = () => {
     {
       name: "Ariful Islam Saikot",
       role: "Office Executive",
-      icon: Briefcase,
+      image: "/images/team3.jpg",
       contact: {
         email: "ariful.soikot@gmail.com",
         linkedin: "https://www.linkedin.com/in/mohammad-ariful-islam-saikot/",
@@ -79,7 +81,7 @@ const AdvisoryPanel = () => {
     {
       name: "Md. Abbas Uddin",
       role: "Sales & Marketing Executive",
-      icon: Briefcase,
+      image: "/images/team4.jpg",
       contact: {
         email: "abbas.uddin12@gmail.com",
         linkedin: "https://www.linkedin.com/in/md-abbas-uddin",
@@ -88,108 +90,88 @@ const AdvisoryPanel = () => {
   ];
 
   return (
-    <section id="team" className="py-24 bg-gradient-to-b from-secondary/40 to-background">
-      <div className="container mx-auto px-4 space-y-24">
+    <section id="team" className="py-16 bg-gradient-to-b from-secondary/40 to-background">
+      <div className="container mx-auto px-4 space-y-16">
+        
         {/* CEO Section */}
-        <div className="space-y-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">Message from Our CEO</h2>
+        <div className="text-center space-y-3">
+          <h2 className="text-3xl md:text-4xl font-bold">Meet Our Leadership</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Leadership with vision and dedication to building a healthier generation.
+            Visionary leadership fostering research and growth.
           </p>
         </div>
 
-        <Card className="max-w-5xl mx-auto border-2 hover:shadow-xl transition-all duration-300 p-8 md:p-12">
-          <CardContent className="flex flex-col md:flex-row items-center gap-10">
-            {/* Left: CEO Picture */}
+        <Card className="max-w-5xl mx-auto border hover:shadow-lg transition-all duration-300">
+          <CardContent className="flex flex-col md:flex-row items-center md:items-start gap-8 p-8">
+            {/* Left: CEO Info */}
             <div className="flex flex-col items-center md:items-start text-center md:text-left md:w-1/3">
-              <div className="w-48 h-48 rounded-full overflow-hidden shadow-xl mb-6">
-                <img
-                  src={ceo.image}
-                  alt={ceo.name}
-                  className="object-cover w-full h-full"
-                />
+              <div className="w-44 h-44 rounded-full overflow-hidden shadow-lg mb-4">
+                <img src={ceo.image} alt={ceo.name} className="object-cover w-full h-full" />
               </div>
               <h3 className="text-2xl font-bold">{ceo.name}</h3>
-              <p className="text-accent font-semibold mb-4">{ceo.title}</p>
+              <p className="text-accent font-medium mb-4">{ceo.title}</p>
 
-              <div className="flex flex-col gap-3 w-full">
-                <Button variant="outline" size="sm" className="justify-start">
-                  <Phone className="h-4 w-4 mr-2" />
-                  {ceo.contact.phone}
+              <div className="space-y-2 w-full">
+                <Button variant="outline" size="sm" className="justify-start w-full">
+                  <Phone className="h-4 w-4 mr-2" /> {ceo.contact.phone}
                 </Button>
                 <Button
                   variant="outline"
                   size="sm"
-                  className="justify-start"
+                  className="justify-start w-full"
                   onClick={() => (window.location.href = `mailto:${ceo.contact.email}`)}
                 >
-                  <Mail className="h-4 w-4 mr-2" />
-                  {ceo.contact.email}
+                  <Mail className="h-4 w-4 mr-2" /> {ceo.contact.email}
                 </Button>
-                {ceo.contact.linkedin && (
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="justify-start"
-                    onClick={() => window.open(ceo.contact.linkedin, "_blank")}
-                  >
-                    <Linkedin className="h-4 w-4 mr-2" />
-                    LinkedIn
-                  </Button>
-                )}
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="justify-start w-full"
+                  onClick={() => window.open(ceo.contact.linkedin, "_blank")}
+                >
+                  <Linkedin className="h-4 w-4 mr-2" /> LinkedIn
+                </Button>
               </div>
             </div>
 
             {/* Right: CEO Message */}
-            <div className="flex-1 space-y-6">
-              <div className="relative p-6 bg-accent/5 rounded-2xl shadow-sm">
-                <Quote className="absolute top-4 left-4 text-accent/30 w-8 h-8" />
-                <p className="text-lg leading-relaxed italic">{ceo.message}</p>
-                <div className="mt-4 text-right font-semibold text-accent">
-                  — {ceo.name}
-                </div>
-              </div>
+            <div className="flex-1 bg-accent/5 rounded-2xl p-6 relative">
+              <Quote className="absolute top-4 left-4 text-accent/30 w-8 h-8" />
+              <h3 className="text-xl font-semibold mb-4 text-accent">Message from Our CEO</h3>
+              <p className="text-lg leading-relaxed italic">{ceo.message}</p>
+              <div className="mt-4 text-right font-semibold text-accent">— {ceo.name}</div>
             </div>
           </CardContent>
         </Card>
 
         {/* Advisory Panel */}
-        <div className="text-center space-y-6">
+        <div className="text-center space-y-3">
           <h2 className="text-3xl md:text-4xl font-bold">Advisory Panel</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Our advisory board includes distinguished academicians and professionals who provide
-            strategic direction and expert insights.
+            Distinguished academicians guiding our strategic vision.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {professors.map((professor, index) => (
-            <Card
-              key={index}
-              className="hover:shadow-lg border-2 transition-all duration-300 rounded-2xl"
-            >
-              <CardContent className="p-6">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                  <GraduationCap className="h-8 w-8 text-primary" />
+        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          {professors.map((prof, index) => (
+            <Card key={index} className="hover:shadow-md border transition-all duration-300 rounded-xl">
+              <CardContent className="p-6 text-center">
+                <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+                  <img src={prof.image} alt={prof.name} className="object-cover w-full h-full" />
                 </div>
-                <h3 className="text-xl font-bold mb-1">{professor.name}</h3>
-                <p className="text-accent font-semibold mb-2">{professor.role}</p>
-                <p className="text-sm text-muted-foreground mb-2 font-medium">
-                  {professor.expertise}
-                </p>
-                <p className="text-xs text-muted-foreground italic mb-3">
-                  {professor.credentials}
-                </p>
-                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                  <span className="font-semibold">Research Focus:</span> {professor.research}
+                <h3 className="text-xl font-bold">{prof.name}</h3>
+                <p className="text-accent font-semibold">{prof.role}</p>
+                <p className="text-sm text-muted-foreground mt-2 mb-1">{prof.expertise}</p>
+                <p className="text-xs text-muted-foreground italic">{prof.credentials}</p>
+                <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
+                  <span className="font-semibold">Research Focus:</span> {prof.research}
                 </p>
                 <Button
                   variant="link"
-                  className="p-0 h-auto text-primary"
-                  onClick={() => window.open(professor.link, "_blank")}
+                  className="mt-3 text-primary p-0 h-auto"
+                  onClick={() => window.open(prof.link, "_blank")}
                 >
-                  View Research Profile
-                  <ExternalLink className="ml-2 h-4 w-4" />
+                  View Research Profile <ExternalLink className="ml-1 h-4 w-4" />
                 </Button>
               </CardContent>
             </Card>
@@ -197,29 +179,25 @@ const AdvisoryPanel = () => {
         </div>
 
         {/* Team Members */}
-        <div className="text-center space-y-6">
+        <div className="text-center space-y-3">
           <h2 className="text-3xl md:text-4xl font-bold">Our Team</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Meet the passionate team members driving research, innovation, and community impact.
+            Passionate individuals driving research and innovation forward.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {teamMembers.map((member, index) => (
-            <Card
-              key={index}
-              className="hover:shadow-lg border transition-all duration-300 rounded-2xl"
-            >
-              <CardContent className="pt-8 text-center">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                  <member.icon className="h-8 w-8 text-accent" />
+            <Card key={index} className="border hover:shadow-md transition-all duration-300 rounded-xl">
+              <CardContent className="p-6 text-center">
+                <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+                  <img src={member.image} alt={member.name} className="object-cover w-full h-full" />
                 </div>
-                <h3 className="text-lg font-bold mb-1">{member.name}</h3>
-                <p className="text-sm text-accent font-semibold mb-4">{member.role}</p>
-
-                <div className="flex flex-col items-center gap-2">
+                <h3 className="text-lg font-bold">{member.name}</h3>
+                <p className="text-sm text-accent font-semibold mb-3">{member.role}</p>
+                <div className="space-y-2 text-sm">
                   {member.contact.email && (
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <div className="flex justify-center items-center gap-2 text-muted-foreground">
                       <Mail className="h-4 w-4 text-accent" />
                       <span>{member.contact.email}</span>
                     </div>
@@ -228,11 +206,9 @@ const AdvisoryPanel = () => {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="mt-2"
                       onClick={() => window.open(member.contact.linkedin, "_blank")}
                     >
-                      <Linkedin className="h-4 w-4 mr-2" />
-                      LinkedIn
+                      <Linkedin className="h-4 w-4 mr-2" /> LinkedIn
                     </Button>
                   )}
                 </div>
