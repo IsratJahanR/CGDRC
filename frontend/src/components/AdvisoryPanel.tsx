@@ -14,13 +14,13 @@ import { Button } from "@/components/ui/button";
 
 const AdvisoryPanel = () => {
   const ceo = {
-    name: "MD. ABDULAZIZ",
-    title: "Chief Executive Officer & Founder",
+    name: "Md. Abdul Aziz",
+    title: "CEO & Founder",
     image: "src/assets/team-members", // Replace with actual CEO image
     contact: {
       phone: "+8801682250051",
       email: "aziz.fst93@gmail.com",
-      linkedin: "https://www.linkedin.com/in/abdulaziz",
+      linkedin: "https://www.linkedin.com/in/md-abdul-aziz-60383b113/",
     },
     message:
       "At Child Growth & Development Research Centre, our mission is to inspire research, innovation, and collaboration to improve child nutrition and overall well-being. Together, we can build a healthier and smarter generation.",
@@ -54,7 +54,7 @@ const AdvisoryPanel = () => {
     {
       name: "Israt Jahan Reshma",
       role: "Junior Researcher",
-      image: "/images/team1.jpg", // Dummy image
+      image: "https://raw.githubusercontent.com/IsratJahanR/CGDRC/refs/heads/main/frontend/src/assets/team-members/israt.png", // Dummy image
       contact: {
         email: "israt.gstu@gmail.com",
         linkedin: "https://www.linkedin.com/in/israt-jahan-788a0619a/",
@@ -95,7 +95,7 @@ const AdvisoryPanel = () => {
         
         {/* CEO Section */}
         <div className="text-center space-y-3">
-          <h2 className="text-3xl md:text-4xl font-bold">Meet Our Leadership</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">Meet Our Team</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Visionary leadership fostering research and growth.
           </p>
@@ -137,7 +137,7 @@ const AdvisoryPanel = () => {
             {/* Right: CEO Message */}
             <div className="flex-1 bg-accent/5 rounded-2xl p-6 relative">
               <Quote className="absolute top-4 left-4 text-accent/30 w-8 h-8" />
-              <h3 className="text-xl font-semibold mb-4 text-accent">Message from Our CEO</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-accent px-10">Message from Our CEO</h3>
               <p className="text-lg leading-relaxed italic">{ceo.message}</p>
               <div className="mt-4 text-right font-semibold text-accent">— {ceo.name}</div>
             </div>
@@ -179,8 +179,8 @@ const AdvisoryPanel = () => {
         </div>
 
         {/* Team Members */}
-        <div className="text-center space-y-3">
-          <h2 className="text-3xl md:text-4xl font-bold">Our Team</h2>
+        <div className="text-center space-y-2">
+          <h2 className="text-3xl md:text-4xl font-bold">Operation and Research Squad</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Passionate individuals driving research and innovation forward.
           </p>
@@ -189,8 +189,8 @@ const AdvisoryPanel = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {teamMembers.map((member, index) => (
             <Card key={index} className="border hover:shadow-md transition-all duration-300 rounded-xl">
-              <CardContent className="p-6 text-center">
-                <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+              <CardContent className="p-4 text-center">
+                <div className="w-36 h-36 rounded-full overflow-hidden mx-auto mb-4">
                   <img src={member.image} alt={member.name} className="object-cover w-full h-full" />
                 </div>
                 <h3 className="text-lg font-bold">{member.name}</h3>

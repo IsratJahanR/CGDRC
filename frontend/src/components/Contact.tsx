@@ -121,7 +121,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
-                    <p className="text-sm text-muted-foreground">+1 (555) 123-4567</p>
+                    <p className="text-sm text-muted-foreground">+8801682250051</p>
                     <p className="text-sm text-muted-foreground">Mon-Fri 9am-5pm</p>
                   </div>
                 </div>
@@ -137,7 +137,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
                     <p className="text-sm text-muted-foreground">info@cgdrc.org</p>
-                    <p className="text-sm text-muted-foreground">research@cgdrc.org</p>
+                    <p className="text-sm text-muted-foreground">info.cgdrc@gmail.com</p>
                   </div>
                 </div>
               </CardContent>
@@ -152,11 +152,10 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Location</h3>
                     <p className="text-sm text-muted-foreground">
-                      123 Research Boulevard
+                      Dhaka
                       <br />
-                      Medical District
-                      <br />
-                      City, State 12345
+                      Bangladesh
+                      
                     </p>
                   </div>
                 </div>
@@ -165,8 +164,7 @@ const Contact = () => {
 
             <Card className="overflow-hidden">
               <div className="h-48 bg-muted relative">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30596073366!2d-74.25986548248684!3d40.69714941932609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1234567890"
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d58407.63461123976!2d90.41496090180331!3d23.80162557863224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1760822329838!5m2!1sen!2sbd"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
