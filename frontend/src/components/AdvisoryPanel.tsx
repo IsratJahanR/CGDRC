@@ -16,7 +16,7 @@ const AdvisoryPanel = () => {
   const ceo = {
     name: "Md. Abdul Aziz",
     title: "CEO & Founder",
-    image: "src/assets/team-members", // Replace with actual CEO image
+    image: "https://raw.githubusercontent.com/IsratJahanR/CGDRC/refs/heads/main/frontend/src/assets/team-members/aziz.jpg", // Replace with actual CEO image
     contact: {
       phone: "+8801682250051",
       email: "aziz.fst93@gmail.com",
@@ -105,7 +105,7 @@ const AdvisoryPanel = () => {
           <CardContent className="flex flex-col md:flex-row items-center md:items-start gap-8 p-8">
             {/* Left: CEO Info */}
             <div className="flex flex-col items-center md:items-start text-center md:text-left md:w-1/3">
-              <div className="w-44 h-44 rounded-full overflow-hidden shadow-lg mb-4">
+              <div className="w-50 h-50 rounded-full overflow-hidden shadow-lg mb-4">
                 <img src={ceo.image} alt={ceo.name} className="object-cover w-full h-full" />
               </div>
               <h3 className="text-2xl font-bold">{ceo.name}</h3>
